@@ -1,0 +1,18 @@
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: valhalla-hpa
+  namespace: valhalla
+spec:
+ scaleTargetRef:
+   apiVersion: apps/v1
+   kind: Deployment
+   name: valhalla
+ minReplicas: 3
+ maxReplicas: 10
+ targetCPUUtilizationPercentage: 50
+...
+~
+~
+
