@@ -39,7 +39,12 @@ ssh-keygen
 kops create cluster --name=valhalla.k8s.local --state=s3://valhalla-k8-storage --zones=ap-south-1a,ap-south-1b,ap-south-1c --node-count=3 --node-size=t2.medium --master-count=3 --master-size=t3.medium --yes
 * created Deployment.yaml file to deploy pods with replicates, adn servrices inclusding name spaces ,
 * for High Availabilty of Infrastructure created 3-Master Nodes Aand 2 Worker nodes in ap-south-1 Zone
+* Implemented HPA for High Availbility based on Resource utilisation & Selfhealing
 
 . 4.Load Balancing and Scalability
     * Application can be accecible only via Loadbalancer only http://ae97462dbdfee47708395e8da219cfc3-1506760141.ap-south-1.elb.amazonaws.com/
-    * crea
+   5.Networking and Security 
+   * all pods,Deployments, svs are in particular name space they are isolated Logically
+   * Used Load Balancer to access application instead of Noeport
+   * To secure the Kubernetes Cluster Implemented RBAC Policies
+     
