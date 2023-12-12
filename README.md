@@ -42,7 +42,7 @@ kops create cluster --name=valhalla.k8s.local --state=s3://valhalla-k8-storage -
 * Implemented HPA for High Availbility based on Resource utilisation & Selfhealing
 
 . 4.Load Balancing and Scalability
-    * Application can be accecible only via Loadbalancer only http://ae97462dbdfee47708395e8da219cfc3-1506760141.ap-south-1.elb.amazonaws.com/ or you can access using http://mynewlms.in/
+    * Application can be accecible only via Loadbalancer only or you can access using http://mynewlms.in/
    5.Networking and Security 
    * all pods,Deployments, svs are in particular name space they are isolated Logically
    * Used Load Balancer to access application instead of Noeport
