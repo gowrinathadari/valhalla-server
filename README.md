@@ -47,4 +47,5 @@ kops create cluster --name=valhalla.k8s.local --state=s3://valhalla-k8-storage -
    * all pods,Deployments, svs are in particular name space they are isolated Logically
    * Used Load Balancer to access application instead of Noeport
    * To secure the Kubernetes Cluster Implemented RBAC Policies
+   * Implemented Nginx Ingress controller to route the traffic to my domain "mynewlms.in"  
      
